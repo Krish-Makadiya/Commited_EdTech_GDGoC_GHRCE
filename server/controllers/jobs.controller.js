@@ -107,6 +107,28 @@ export const getSavedJobs = async (req, res) => {
     }
 };
 
+export const getPassedJobs = async (req, res) => {
+    try {
+        const { clerkId } = req.params;
+        const snapshot = await db
+            .collection("users")
+            .doc(clerkId)
+            .collection("passed_jobs")
+            .orderBy("passedAt", "desc")
+            .get();
+
+        const passedJobs = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+        }));
+
+        res.status(200).json(passedJobs);
+    } catch (error) {
+        console.error("Error fetching passed jobs:", error);
+        res.status(500).json({ message: error.message });
+    }
+};
+
 export const batchJobActions = async (req, res) => {
     try {
         const { clerkId } = req.params;

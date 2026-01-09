@@ -7,8 +7,9 @@ import Onboarding from "./pages/Onboarding";
 import JobPreferences from "./pages/Settings/JobPreferences";
 import MyAccount from "./pages/Settings/MyAccount";
 import MyProfile from "./pages/Settings/MyProfile";
-import SavedJobs from "./pages/Careers/SavedJobs";
 import CourseSuggestions from "./pages/Careers/CourseSuggestions";
+import AcceptedJobs from "./pages/Careers/AcceptedJobs";
+import RejectedJobs from "./pages/Careers/RejectedJobs";
 
 const App = () => {
 
@@ -47,15 +48,19 @@ const App = () => {
                     </ProtectedRoute>
                 } />
 
-                <Route path="saved-jobs" element={
-                    <ProtectedRoute>
-                        <SavedJobs />
-                    </ProtectedRoute>
-                } />
-
                 <Route path="course-suggestions" element={
                     <ProtectedRoute>
                         <CourseSuggestions />
+                    </ProtectedRoute>
+                } />
+                <Route path="accepted-jobs" element={
+                    <ProtectedRoute>
+                        <AcceptedJobs />
+                    </ProtectedRoute>
+                } />
+                <Route path="rejected-jobs" element={
+                    <ProtectedRoute>
+                        <RejectedJobs />
                     </ProtectedRoute>
                 } />
             </Route>

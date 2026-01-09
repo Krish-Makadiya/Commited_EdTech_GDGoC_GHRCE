@@ -82,16 +82,16 @@ const data = {
             icon: BookOpen,
             items: [
                 {
-                    title: "Saved Jobs",
-                    url: "/dashboard/saved-jobs",
-                },
-                {
                     title: "Course Suggestions",
                     url: "/dashboard/course-suggestions",
                 },
                 {
-                    title: "History",
-                    url: "/dashboard/history",
+                    title: "Accepted Jobs",
+                    url: "/dashboard/accepted-jobs",
+                },
+                {
+                    title: "Rejected Jobs",
+                    url: "/dashboard/rejected-jobs",
                 },
             ],
         },

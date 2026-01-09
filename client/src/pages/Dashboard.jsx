@@ -114,7 +114,7 @@ const Dashboard = () => {
                     userId: user.id,
                     skills: ["JavaScript", "React", "Node.js", "MongoDB", "Express"] // Static skills for testing
                 };
-                const res = await axios.post('http://localhost:5678/webhook-test/get-ai-recommendations', payload);
+                const res = await axios.post('http://localhost:5678/webhook/2777d0a3-1580-45a4-bf2c-d9bcf07f6afb', payload);
                 console.log("AI Recommendations:", res.data);
             } catch (error) {
                 console.error("Error fetching AI recommendations:", error);
