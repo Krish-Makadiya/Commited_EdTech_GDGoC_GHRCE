@@ -5,6 +5,8 @@ import {
     Bot,
     Frame,
     GalleryVerticalEnd,
+    GraduationCap,
+    History,
     Map,
     PieChart,
     Settings2,
@@ -58,33 +60,21 @@ const data = {
             ],
         },
         {
-            title: "Models",
-            url: "#",
-            icon: Bot,
-            items: [
-                {
-                    title: "Genesis",
-                    url: "#",
-                },
-                {
-                    title: "Explorer",
-                    url: "#",
-                },
-                {
-                    title: "Quantum",
-                    url: "#",
-                },
-            ],
-        },
-        {
             title: "Career",
             url: "#",
-            icon: BookOpen,
+            icon: GraduationCap,
             items: [
                 {
                     title: "Course Suggestions",
                     url: "/dashboard/course-suggestions",
                 },
+            ],
+        },
+        {
+            title: "History",
+            url: "#",
+            icon: History,
+            items: [
                 {
                     title: "Accepted Jobs",
                     url: "/dashboard/accepted-jobs",

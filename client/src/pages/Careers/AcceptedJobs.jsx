@@ -122,6 +122,17 @@ const AcceptedJobs = () => {
                         {job.companyName}
                       </div>
                     </div>
+                    <div className="h-12 w-12 rounded-lg bg-white dark:bg-neutral-800 p-2 shadow-sm border border-neutral-100 dark:border-neutral-700 flex items-center justify-center overflow-hidden shrink-0">
+                      {job.companyLogo ? (
+                        <img
+                          src={job.companyLogo}
+                          alt={job.companyName}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <Building2 className="w-6 h-6 text-neutral-400" />
+                      )}
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent className="flex-1 space-y-4">
